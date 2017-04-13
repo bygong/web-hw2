@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+  .row { margin-bottom: 36px; }
+  img { box-shadow: 4px 4px 4px gray;}
+</style>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Campus Landmarks</h1>
+  </div>
+
+  <% landmarks = Landmark.all %>
+  <% landmarks.each do |l| %>
+
+  <div class="row">
+    <div class="col-md-4">
+      <a href="/guide/<%= l.id %>">
+        <img class="img-responsive" src="<%= l.image %>" >
+      </a>
+    </div>
+    <div class="col-md-8">
+      <h3><a href="/guide/<%= l.id %>"><%= l.name %></a></h3>
+    </div>
+  </div>
+
+  <% end %>
+</div>

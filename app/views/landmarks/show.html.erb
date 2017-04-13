@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+  .row { margin-bottom: 36px; }
+  img { box-shadow: 4px 4px 4px gray;}
+</style>
+
+<div class="container">
+  <div class="page-header">
+    <h1><a href="/guide">Campus Landmarks</a></h1>
+  </div>
+
+  <% l = Landmark.find_by(params["id"]) %>
+
+  <div class="row">
+    <div class="col-sm-12">
+      
+      <h2><%= l.name %></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img class="img-responsive" src=<%= l.image %>>
+    </div>
+    <div class="col-md-6">
+      <p class="lead">
+          <%= l.description %>
+      </p>
+    </div>
+  </div>
+
+</div>
