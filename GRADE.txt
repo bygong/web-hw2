@@ -1,6 +1,6 @@
 HW 2 Grade - bygong
 
-Score: (4/5)
+Score: (5/5)
 
 Nice job. However, the call to `Landmark.find_by` in `show.html.erb`, and `Landmark.all` in `index.html.erb` should both be 
 instead done from the `LandmarksController` (in the `show` and `index` methods, respectively), not from the view! 
@@ -9,3 +9,6 @@ An alternative to defining all that landmark data in your model file would be to
 file, and import it into `landmark.rb`. 
 
 Minor note, but careful to double check casing on your file names! The `C` in `landmarks_Controller.rb` should be lower case.
+
+REVISED:
+Adding back 1 point taken off for not retrieving data from the controller.
